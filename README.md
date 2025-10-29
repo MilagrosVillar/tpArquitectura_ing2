@@ -23,3 +23,5 @@ Y el patrón que elegí a raíz de esto es el patrón Singleton, ya que garantiz
  En este diagrama de UML de clases, represento cómo utilizo el patrón Singleton, con una única instancia, constructor privado, método getInstance() estático y punto de acceso global. En la capa de presentación, utilizo la clase “BibliotecaUI” para manejar la interacción con el usuario (formularios, menús, vistas, etc), que llama a la capa de negocios para realizar acciones cómo registrar socios o prestar libros. Utilizo la clase de BibliotecaService cómo la capa de lógica de Negocios, esta clase contiene la lógica de validaciones, control de disponibilidad, fechas de préstamos, etc que se comunican con los DAO para acceder a la base de datos. En la capa de datos utilico las clases de LibroDAO y SocioDAO para encargarse de las operaciones CRUD sobre la base de datos, que utilizan la clase de ConexionBD como único punto de conexión global. Finalmente se encuentra la clase ConexionBD, que es la gestión de la conexión a la base de datos, es decir que las demás clases acceden a esta conexión por medio del método getInstancia().
 
  
+
+ 
